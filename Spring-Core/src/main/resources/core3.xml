@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd
+    					http://www.springframework.org/schema/util
+                    	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<bean id="controller" class="spring.core.quest3.BankAccountController" autowire="byName">
+		
+	</bean>
+	
+	<bean id="bankServ" class="spring.core.quest3.BankAccountServiceImpl" autowire="byName">
+	
+	</bean>
+    
+    <bean id="bankRepo" class="spring.core.quest3.BankAccountRepositoryImpl" autowire="byName">
+    
+    </bean>
+    
+    <bean id="account1" class="spring.core.quest3.BankAccount">
+    	<property name="accountId" value="125"/>
+    	<property name="accountHolderName" value="Tony"/>
+    	<property name="accountType" value="Savings"/>
+    	<property name="accountBalance" value="1697000"/>
+    </bean>
+    
+    <bean id="account2" class="spring.core.quest3.BankAccount">
+    	<property name="accountId" value="450"/>
+    	<property name="accountHolderName" value="Steve"/>
+    	<property name="accountType" value="Current"/>
+    	<property name="accountBalance" value="8500000"/>
+    </bean>
+    
+    <bean id="account3" class="spring.core.quest3.BankAccount">
+    	<property name="accountId" value="965"/>
+    	<property name="accountHolderName" value="Thor"/>
+    	<property name="accountType" value="Savings"/>
+    	<property name="accountBalance" value="7882000"/>
+    </bean>
+    
+    <!-- Arrays.asList(
+			new BankAccount(120284L, "Tony", "Savings", 16970000),
+			new BankAccount(965796L, "Steve", "Current", 8500000),
+			new BankAccount(547821L, "Thor", "Savings", 7882000)
+			); -->
+    
+    
+</beans>

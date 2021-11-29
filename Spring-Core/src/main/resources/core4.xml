@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd
+    					http://www.springframework.org/schema/context
+        				https://www.springframework.org/schema/context/spring-context.xsd">
+                    	
+    
+    <bean id="account1" class="spring.core.quest4.BankAccount">
+    	<property name="accountId" value="125"/>
+    	<property name="accountHolderName" value="Tony"/>
+    	<property name="accountType" value="Savings"/>
+    	<property name="accountBalance" value="1697000"/>
+    </bean>
+    
+    <bean id="account2" class="spring.core.quest4.BankAccount">
+    	<property name="accountId" value="450"/>
+    	<property name="accountHolderName" value="Steve"/>
+    	<property name="accountType" value="Current"/>
+    	<property name="accountBalance" value="8500000"/>
+    </bean>
+    
+    <bean id="account3" class="spring.core.quest4.BankAccount">
+    	<property name="accountId" value="965"/>
+    	<property name="accountHolderName" value="Thor"/>
+    	<property name="accountType" value="Savings"/>
+    	<property name="accountBalance" value="7882000"/>
+    </bean>
+    
+    <context:annotation-config/>
+    <context:component-scan base-package="spring.core.quest4"/>
+    
+</beans>
